@@ -1,0 +1,136 @@
+/* TEXT */
+@font-face {
+    font-family: "BatMan";
+    src: url("../fonts/SVN-Batman Forever Alternate.otf");
+}
+p{
+    font-family: "BatMan";
+    font-size: 50px;
+    z-index: 99;
+    top:50%;
+    text-align: center;
+    position: absolute;
+    -webkit-text-stroke:1px;
+    width:max-content;
+    color:transparent;
+}
+@keyframes animationText {
+    0%{
+        color:#999999;
+    }
+    100%
+    {
+color:#ffffff;
+    }
+    
+}
+.text-l{
+    transform: translateX(-30%) translateY(-50%) rotate(-90deg);
+    animation:animationText 0.5s ease-in-out infinite;
+}
+.text-r{
+    transform: translateX(30%) translateY(-50%) rotate(-90deg);
+    right: 0;
+    width: 500px;
+    animation:animationText 0.5s ease-in-out infinite;
+}
+/* background */
+.background {
+    background: url("../img/map_songsaigon.jpg") no-repeat;
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    filter: blur(3px);
+  }
+.overlay{
+    background-color: rgba(1,55,71,0.85);
+
+    position: fixed;
+    z-index: 1;
+    inset: 0;
+}
+/* content */
+.content{
+    position: absolute;
+    background-color: #ffffff;
+    width: 60%;
+    height: 80%;
+    z-index: 22;
+    overflow: hidden;
+    left:50%;
+    top:50%;
+    transform: translate(-50% ,-50%);
+    box-shadow: 0 0 20px rgba(0,0,0,0.9);
+}
+.inner-block{
+    background: url("../img/map_songsaigon.jpg");
+    position:absolute ;
+    width:100%;
+    background-position: left 0 center;
+    height: 100%;
+    transition: all 0.5s ease;
+}
+.image_map{
+    width: 100%;
+    height: 80%;
+    position: relative;
+}
+.btn-common{
+    position:absolute;
+    z-index: 99;
+    left:50%;
+    height:50px;
+    cursor: pointer;
+    width:100px;
+    align-items: center;
+    justify-content: center;
+}
+.btn-up{
+    top:0;
+}
+.btn-down{
+    bottom:0;
+}
+@keyframes animationFooter {
+    0%,100%{
+        transform: translateY(4px);
+    }
+    50%{ 
+        transform: translateY(-4px);
+    }
+}
+#location.center{
+    top:38%;
+    left:400px;
+}
+#location.top{
+    top:19%;
+    left:130px;
+}
+#location.bottom{
+    top:79%;
+    left:457px;
+}
+#location{
+    animation:animationFooter 1.5s ease-in-out infinite;
+    position: absolute;
+    z-index: 99;
+    transition: all 0.5s ease;
+}
+.logo img{
+    cursor: pointer;
+}
+.logo:hover img{
+    animation:animationFooter 0.5s ease-in-out infinite
+}
+.overlay_mouse{
+    position: absolute;
+    z-index: 11;
+    left:0;
+    right:0;
+    height: 50px;
+}
+.overlay_mouse_top{
+    top:0;
+}
+.overlay_mouse_bottom{bottom:0;}
